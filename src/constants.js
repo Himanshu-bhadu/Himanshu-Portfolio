@@ -1,6 +1,6 @@
 import htmllogo from './assets/icons/html.svg'
 import css from './assets/icons/CSS.svg'
-import javascript from './assets/icons/javascript.svg'
+import js from './assets/icons/javascript.svg'
 import bootstrap from './assets/icons/bootstrap.svg'
 import clangugae from './assets/icons/c.svg'
 import cpplang from './assets/icons/cpp.svg'
@@ -54,7 +54,7 @@ export const SkillsInfo = [
       { name: 'C', logo: clangugae },
       { name: 'C++', logo: cpplang },
       { name: 'Python', logo: python },
-      { name: 'JavaScript', logo: javascript },
+      { name: 'JavaScript', logo: js },
       { name: 'TypeScript', logo: typescript },
     ],
   },
