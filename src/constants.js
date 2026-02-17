@@ -1,6 +1,6 @@
 import htmllogo from './assets/icons/html.svg'
 import css from './assets/icons/CSS.svg'
-import js from './assets/icons/javascript.svg'
+import js from './assets/icons/temp.svg'
 import bootstrap from './assets/icons/bootstrap.svg'
 import clangugae from './assets/icons/c.svg'
 import cpplang from './assets/icons/cpp.svg'
