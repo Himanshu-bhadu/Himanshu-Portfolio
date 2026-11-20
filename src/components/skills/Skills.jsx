@@ -35,7 +35,7 @@ const Skills = () => {
             transition={{ duration: 0.5, delay: index * 0.1 }}
             viewport={{ once: true }}
             
-            className='
+            className={`
               group
               relative
               rounded-3xl
@@ -47,7 +47,8 @@ const Skills = () => {
               hover:shadow-purple-500/20
               transition-all duration-500
               hover:-translate-y-2
-            '
+              ${index === SkillsInfo.length - 1 && SkillsInfo.length % 2 !== 0 ? 'md:col-span-2 md:max-w-2xl md:mx-auto w-full' : ''}
+            `}
           >
 
             {/* Glow Border */}

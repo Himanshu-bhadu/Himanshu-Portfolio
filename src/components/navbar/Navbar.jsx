@@ -34,11 +34,20 @@ const Navbar = () => {
   /* ---------------- NAVBAR BACKGROUND ON SCROLL ---------------- */
 
   useEffect(() => {
+    let ticking = false;
+
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          const isScrolled = window.scrollY > 50;
+          setScrolled((prev) => (prev !== isScrolled ? isScrolled : prev));
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -56,6 +65,7 @@ const Navbar = () => {
   const menu = [
     { id: "about", label: "About" },
     { id: "skills", label: "Skills" },
+    { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "education", label: "Education" },
     { id: "contact", label: "Contact" },

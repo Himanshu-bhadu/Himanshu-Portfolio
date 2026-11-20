@@ -4,12 +4,13 @@ import video from "../../assets/icons/video.mp4";
 
 const roles = [
   "Fullstack Developer",
+  "Machine Learning Enthusiast",
   "Problem Solver",
   "Coder",
   "Tech Enthusiast",
 ];
 
-const About = () => {
+const TypingRole = () => {
   const [text, setText] = useState("");
   const [roleIndex, setRoleIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -38,6 +39,15 @@ const About = () => {
   }, [text, isDeleting, roleIndex]);
 
   return (
+    <span className="text-[#8245ec]">
+      {text}
+      <span className="animate-pulse">|</span>
+    </span>
+  );
+};
+
+const About = () => {
+  return (
     <section
       id="about"
       className="
@@ -50,7 +60,7 @@ const About = () => {
         overflow-hidden
       "
     >
-      <div className="absolute inset-0 bg-[radial-linear(circle_at_70%_30%,rgba(130,69,236,0.15),transparent_60%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-linear(circle_at_70%_30%,rgba(130,69,236,0.15),transparent_60%)] pointer-events-none transform-gpu" />
 
       <div className="flex flex-col-reverse md:flex-row items-center gap-16 w-full">
         
@@ -81,11 +91,7 @@ const About = () => {
 
           <div className="text-xl sm:text-2xl md:text-3xl font-semibold">
             <span className="text-orange-400">I am </span>
-
-            <span className="text-[#8245ec]">
-              {text}
-              <span className="animate-pulse">|</span>
-            </span>
+            <TypingRole />
           </div>
 
           <p className="text-base sm:text-lg text-gray-400 mt-8 leading-relaxed">
@@ -101,7 +107,7 @@ const About = () => {
           </p>
 
           <div className="flex flex-wrap gap-3 mt-6 justify-center md:justify-start">
-            {["MongoDB","Express.JS","React.JS","Node.JS","JavaScript","Git"].map((skill)=>(
+            {["React.JS", "Next.JS", "Node.JS", "Python", "Machine Learning", "MongoDB", "Git"].map((skill) => (
               <span
                 key={skill}
                 className="

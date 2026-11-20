@@ -1,10 +1,24 @@
 @import "tailwindcss";
+
 ::-webkit-scrollbar {
     display: none;
 }
 
 html {
   scroll-behavior: smooth;
+}
+
+/* GPU hardware acceleration for smooth 60fps rendering */
+.backdrop-blur-xl,
+.backdrop-blur-2xl,
+.backdrop-blur-md {
+  transform: translateZ(0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+img {
+  content-visibility: auto;
 }
 
 @keyframes fadeIn {

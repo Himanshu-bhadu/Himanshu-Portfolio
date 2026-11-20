@@ -5,7 +5,7 @@ const educationData = [
   {
     title: "Delhi Technological University",
     subtitle: "B.Tech in Electrical Engineering",
-    extra: "CGPA: 8.7",
+    extra: "CGPA: 8.91",
     courses: [
       "Data Structures & Algorithms",
       "Object-Oriented Programming",
@@ -37,7 +37,7 @@ const Education = () => {
       className="relative py-28 px-6 md:px-16 lg:px-32 overflow-hidden"
     >
       {/* Background Glow */}
-      <div className="absolute top-0 left-1/2 w-125 h-125 bg-purple-600/20 blur-[140px] -translate-x-1/2"></div>
+      <div className="absolute top-0 left-1/2 w-125 h-125 bg-purple-600/20 blur-[90px] -translate-x-1/2 pointer-events-none transform-gpu"></div>
 
       {/* Heading */}
       <motion.h1
